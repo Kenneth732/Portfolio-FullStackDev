@@ -5,9 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0d0c22;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+:root{
+  --darkreader-neutral-background: #212222;
+  --darkreader-neutral-text: #eae3d9;
+  --darkreader-selection-background: #165aaa;
+  --darkreader-selection-text: #fbf5ec;
 }
