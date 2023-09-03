@@ -1,112 +1,95 @@
-/* Example CSS for navbar */
 
-
-
-.navbar {
+.navbar{
+  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px 30px;
+  justify-content: space-between;
+  background: #fff;
+  padding: 6px 6%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  /* border-radius: 50px; */
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+.logo{
+  font-size: 30px;
+  margin-right: 15px;
+  display: block;
+  color: #000;
 }
 
-nav{
-display: flex;
-padding: 20px;
-gap: 30px;
-align-items: center;
-}
-
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav-links {
+.navmiddle ul li{
   list-style: none;
-  margin: 0;
+  display: inline-block;
+}
+
+.navmiddle ul li .nav-link{
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  font-size: 14px;
+  margin: 5px 8px;
+  padding-right: 5px;
+  position: relative;
 }
 
-.nav-link {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s ease-in-out;
+.navmiddle ul li .nav-link::after{
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #045be6;
+  position: absolute;
+  bottom: -15px;
+  transition: width 0.5s;
 }
 
-.nav-link:hover {
-  color: #007bff;
+.navmiddle ul li .nav-link:hover::after{
+  width: 100%;
 }
 
-.menu-toggle {
+.profile{
+  object-fit: cover;
+  position: relative;
+  display: block;
+   width: 50px;
+   border-radius: 50px;
+   cursor: pointer;
+}
+
+.online{
+  position: relative;
+}
+
+.online::after{
+  content: '';
+  width: 7px;
+  height: 7px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  right: 0;
+  top: 0;
+  background: greenyellow;
+  position: absolute;
+}
+
+.search{
+  background: #f0f2f5;
+  width: 250px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.navleft{
+  display: flex;
+  align-items: center;
+}
+.search input{
+  width: 100%;
+  background: transparent;
+  padding: 8px;
   border: none;
-  background-color: transparent;
-  cursor: pointer;
   outline: none;
-  font-size: 1.5rem;
-  color: #fff;
-  transition: color 0.3s ease-in-out;
-  display: none;
 }
-
-.menu-toggle:hover {
-  color: #007bff;
-}
-
-/* Media query for responsive behavior */
-@media (max-width: 768px) {
-
-  .menu-toggle{
-    display: block;
-  }
-  .nav-links {
-    display: none; 
-    flex-direction: column;
-    background-color: #007bff;
-    position: absolute;
-    top: 100px; 
-    right: 12px;
-    width: 70%;
-    height: 22vh;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
-    max-width: 300px;
-    margin: 1rem;
-  }
-
-  /* .nav-linkx ul{
-    background-color: #007bff;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 50vh;
-    padding-top: 15px;
-  } */
-
-  .nav-linkx ul li{
-    display: inline-block;
-    margin: 10px;
-    align-items: center;
-    text-align: center;
-    color: beige;
-  }
-
-  .nav-links.active {
-    display: flex; /* Show the links when the menu is active */
-  }
-
-  .nav-link {
-    color: #fff; 
-    padding: 1rem 0; 
-    text-align: center; 
-  }
-}
-
